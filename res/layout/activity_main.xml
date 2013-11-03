@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/number7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="92dp"
+        android:text="@string/number7"
+        android:tag="7"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number7"
+        android:layout_alignBottom="@+id/number7"
+        android:layout_toRightOf="@+id/number7"
+        android:text="@string/number8"
+        android:tag="8"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number8"
+        android:layout_alignBottom="@+id/number8"
+        android:layout_toRightOf="@+id/number8"
+        android:text="@string/number9"
+        android:tag="9"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number5"
+        android:layout_alignBottom="@+id/number5"
+        android:layout_alignParentLeft="true"
+        android:text="@string/number4" 
+        android:tag="4"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/number6"
+        android:layout_below="@+id/number6"
+        android:text="@string/number3"
+        android:tag="3"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/number9"
+        android:layout_below="@+id/number9"
+        android:text="@string/number6"
+        android:tag="6"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/number3"
+        android:layout_toLeftOf="@+id/number3"
+        android:text="@string/number5"
+        android:tag="5"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/number4"
+        android:text="@string/number1"
+       	android:tag="1"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number1"
+        android:layout_alignBottom="@+id/number1"
+        android:layout_toRightOf="@+id/number1"
+        android:text="@string/number2"
+		android:tag="2"
+        android:onClick="dealWithNumber" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number9"
+        android:layout_alignBottom="@+id/number9"
+        android:layout_toRightOf="@+id/number9"
+        android:text="@string/multiply"
+        android:tag="*"
+        android:onClick="addManipulator" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number9"
+        android:layout_toRightOf="@+id/number9"
+        android:text="@string/divide"
+        android:tag="/"
+        android:onClick="addManipulator" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/equals"
+        android:layout_alignLeft="@+id/divide"
+        android:text="@string/plus"
+        android:tag="+"
+        android:onClick="addManipulator" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/plus"
+        android:layout_below="@+id/plus"
+        android:onClick="addManipulator"
+        android:tag="-"
+        android:text="@string/minus" />
+
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number0"
+        android:layout_alignBottom="@+id/number0"
+        android:layout_toLeftOf="@+id/minus"
+        android:onClick="calculateNumber"
+        android:text="@string/equals" />
+
+    <Button
+        android:id="@+id/number0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number1"
+        android:layout_toRightOf="@+id/number1"
+        android:onClick="dealWithNumber"
+        android:tag="0"
+        android:text="@string/number0" />
+
+    <Button
+        android:id="@+id/decimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number1"
+        android:layout_toLeftOf="@+id/number2"
+        android:onClick="addManipulator"
+        android:tag="."
+        android:text="@string/decimal" />
+
+    <Button
+        android:id="@+id/storeAnswer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/number8"
+        android:layout_alignParentLeft="true"
+        android:onClick="storeAnswer"
+        android:text="@string/storeAnswer" />
+
+    <Button
+        android:id="@+id/retrieveAnswer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/multiply"
+        android:layout_below="@+id/answer"
+        android:onClick="retrieveAnswer"
+        android:text="@string/retrieveAnswer" />
+
+    <Button
+        android:id="@+id/answer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/storeAnswer"
+        android:layout_alignParentLeft="true"
+        android:onClick="retrievePreviousAnswer"
+        android:text="@string/answer" />
+
+    <Button
+        android:id="@+id/clearAll"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/answer"
+        android:layout_alignBottom="@+id/answer"
+        android:layout_alignRight="@+id/retrieveAnswer"
+        android:onClick="clearAll"
+        android:text="@string/clearAll" />
+
+    <Button
+        android:id="@+id/clear"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/clearAll"
+        android:layout_alignBottom="@+id/clearAll"
+        android:layout_toLeftOf="@+id/clearAll"
+        android:onClick="clear"
+        android:text="@string/clear" />
+
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/answer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/clearAll"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+private char a = 'a';
+private char b = 'b';
+
+System.out.println(a == b);
